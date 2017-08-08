@@ -1,0 +1,31 @@
+{
+  "name": "escape-diacritics",
+  "version": "1.1.1",
+  "description": "remove diacritics/accents in the given string",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js > dist/escape-diacritics.js --standalone 'removeDiacritics'",
+    "minify": "npm run build && uglifyjs dist/escape-diacritics.js > dist/escape-diacritics.min.js",
+    "test": "mocha test/test.js",
+    "prebuild": "npm run test && rm -rf dist && mkdir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsl143/escape-diacritics.git"
+  },
+  "keywords": [
+    "html",
+    "escape-diacritics",
+    "accents",
+    "html",
+    "diacritics",
+    "é"
+  ],
+  "author": "Trishul Goel",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "mocha": "^2.5.3",
+    "uglify-js": "^2.6.2"
+  }
+}
